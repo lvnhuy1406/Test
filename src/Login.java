@@ -102,8 +102,12 @@ public class Login extends JFrame {
 
                         if (rs.next()) {
                             JOptionPane.showMessageDialog(null, "Chúc mừng đăng nhập thành công!");
+                            txtUser.setText("");
+                            txtPass.setText("");
                         } else {
                             JOptionPane.showMessageDialog(null, "Đăng nhập thất bại!");
+                            txtUser.setText("");
+                            txtPass.setText("");
                         }
                     } catch (Exception ex) {
                         ex.printStackTrace();
